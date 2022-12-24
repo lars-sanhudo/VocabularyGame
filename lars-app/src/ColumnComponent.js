@@ -72,19 +72,23 @@ function ColumnComponent(props){
         <ItemComponent
         content = {dadosArray[indexPosition[0][props.columnPosition]][props.columnPosition]}
         position = "1"
+        columnposition  = {props.columnPosition}
         
         />
         <ItemComponent
         content = {dadosArray[indexPosition[1][props.columnPosition]][props.columnPosition]}
         position = "2"
+        columnposition  = {props.columnPosition}
         />
         <ItemComponent
         content = {dadosArray[indexPosition[2][props.columnPosition]][props.columnPosition]}
         position = "3"
+        columnposition  = {props.columnPosition}
         />
         <ItemComponent
         content = {dadosArray[indexPosition[3][props.columnPosition]][props.columnPosition]}
         position = "4"
+        columnposition  = {props.columnPosition}
         />
         </div>
         </>

@@ -1,3 +1,7 @@
+//import index from ".";
+//import { createElement } from 'react';
+import ReactDOM from 'react-dom/client';
+//import ColumnComponentCenter from './ColumnComponentCenter';
 
 function ItemComponent(props) {
     
@@ -5,9 +9,22 @@ function ItemComponent(props) {
     
     
     return(
-        <div className="itemClass"
+        <div className="itemClass" id={"item" + props.position + props.columnposition}
         onClick={
-            () => {alert("Hello, I'm a testing.")}
+            () => {
+                if(props.columnposition === 1){
+                    alert("Hello, I'm a testing.");
+                    const column = document.getElementById("centerComponent");
+                    column.appendChild(document.getElementById("item" + props.position + props.columnposition));
+                }
+                
+                
+
+                
+
+
+
+            }
         }
         >-{props.content}-</div>
     );
