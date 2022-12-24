@@ -1,0 +1,25 @@
+body {
+  background-color: lightpink;
+  height: 500px;
+}
+
+.rootClass {
+  display: flex;
+  background-color: lightgray;
+  justify-content: space-between;
+  height: 500px;
+  
+}
+
+.columnClass {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+  
+   
+}
+
+.itemClass {
+  height: 100px;
+}
