@@ -18,8 +18,13 @@ function RandomPosition() {
         console.log("Entrei aqui");
         //console.log(indexControl.length);
         
-        if(indexControl[i][0] == 0){
-            indexControl[i][0] = Math.floor(Math.random()*7+1);
+        let randomPosition = Math.floor(Math.random()*dadosArray.length);
+        console.log("Random Position:" + randomPosition);
+
+        if(dadosArray[randomPosition][2] === 0){
+            dadosArray[randomPosition][2] = 1;
+            indexControl[i][0] = randomPosition; 
+            
             console.log("Random Position: " + indexControl[i][0]);
 
             //console.log("indexControl: "+indexControl);
@@ -27,7 +32,7 @@ function RandomPosition() {
                 let randomNumber = Math.floor(Math.random()*indexControl.length);
                 console.log("RandomNumber: " + randomNumber);
                 //console.log(randomNumber);
-                if(indexControl[randomNumber][1] == 0){
+                if(indexControl[randomNumber][1] === 0){
                     indexControl[randomNumber][1] = indexControl[i][0];
                     ok = true;
                     //console.log("Entrei aqui");
@@ -38,8 +43,10 @@ function RandomPosition() {
             }
     
             ok = false;
-            
+
         }
+            
+        
 
        
         //console.log(indexControl);
@@ -52,6 +59,7 @@ function RandomPosition() {
 
 
 console.log(indexPosition);
+console.log(dadosArray);
 
 
 
@@ -65,20 +73,20 @@ function ColumnComponent(){
         <>
         <div className="columnClass">
         <ItemComponent
-        content = {"I'm a content."}
+        content = {dadosArray[indexPosition[0][0]][0]}
         position = "1"
         
         />
         <ItemComponent
-        content = "I'm a content."
+        content = {dadosArray[indexPosition[1][0]][0]}
         position = "2"
         />
         <ItemComponent
-        content = "I'm a content."
+        content = {dadosArray[indexPosition[2][0]][0]}
         position = "3"
         />
         <ItemComponent
-        content = "I'm a content."
+        content = {dadosArray[indexPosition[3][0]][0]}
         position = "4"
         />
         </div>

@@ -1,21 +1,23 @@
-const data  = [
+const dados  = [
     [
-        "word1", "meaning1"
+        "word1", "meaning1", 0
     ],
     [
-        "word2", "meaning2"
+        "word2", "meaning2", 0
     ],
     [
-        "word3", "meaning3"
+        "word3", "meaning3", 0
     ],
     [
-        "word4", "meaning4"
+        "word4", "meaning4", 0
     ],
     [
-        "word5", "meaning5"
+        "word5", "meaning5", 0
     ],
     [
-        "word6", "meaning6"
+        "word6", "meaning6", 0
     ]
 ]
+
+export default dados;
 
