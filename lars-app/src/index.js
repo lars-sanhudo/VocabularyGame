@@ -3,13 +3,20 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import ColumnComponent from './ColumnComponent';
+import ColumnComponentCenter from './ColumnComponentCenter';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ColumnComponent/>
-    <ColumnComponent/>
-    <ColumnComponent/>
+    <ColumnComponent
+    columnPosition = {0}
+    head = "WORDS"
+    />
+    <ColumnComponentCenter/>
+    <ColumnComponent
+    columnPosition = {1}
+    head = "MEANINGS"
+    />
   </React.StrictMode>
 );
 

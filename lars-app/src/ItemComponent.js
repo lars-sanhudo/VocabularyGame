@@ -5,7 +5,11 @@ function ItemComponent(props) {
     
     
     return(
-        <div className="itemClass">-{props.content}-</div>
+        <div className="itemClass"
+        onClick={
+            () => {alert("Hello, I'm a testing.")}
+        }
+        >-{props.content}-</div>
     );
 
     
