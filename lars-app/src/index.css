@@ -17,9 +17,12 @@ body {
   justify-content: space-between;
   
   
+  
    
 }
 
 .itemClass {
   height: 100px;
+  align-items: flex-end;
+  
 }
