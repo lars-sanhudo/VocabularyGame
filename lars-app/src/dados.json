@@ -1,5 +1,6 @@
 {
     "word1": {
+        "index": 1,
         "left": "Word1",
         "right": "Meaning 1"
     }
