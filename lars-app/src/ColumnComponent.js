@@ -1,16 +1,18 @@
 import ItemComponent from "./ItemComponent";
 import dadosArray from "./DadosArray";
-import dados from "./DadosArray";
 
 
 
-let indexPosition = RandomPosition();
+let indexAnswer = [[0,0],[0,0],[0,0],[0,0]];
+let indexPosition = RandomPosition(indexAnswer);
 
 
-function RandomPosition() {
 
+function RandomPosition(indexAnswer) {
+    
     let i = 0;
     let indexControl = [[0,0],[0,0],[0,0],[0,0]];
+   
     let ok = false;
     
 
@@ -23,7 +25,8 @@ function RandomPosition() {
 
         if(dadosArray[randomPosition][2] === 0){
             dadosArray[randomPosition][2] = 1;
-            indexControl[i][0] = randomPosition; 
+            indexControl[i][0] = randomPosition;
+            indexAnswer[i][0] = i; 
             
             
 
@@ -35,8 +38,9 @@ function RandomPosition() {
                 if(indexControl[randomNumber][1] === 0){
                     indexControl[randomNumber][1] = indexControl[i][0];
                     ok = true;
-                    
+                    indexAnswer[i][1] = randomNumber;
                     i++;
+
                 }
                 
             }
@@ -51,13 +55,16 @@ function RandomPosition() {
         
         
     }
-
+    
+    console.log(indexAnswer);
     return (indexControl);
+    
 }
 
 for(let k = 0; k< dadosArray.length; k++){
     dadosArray[k][2] = 0;
 }
+
 
 
 
@@ -67,28 +74,42 @@ function ColumnComponent(props){
     
     return(
         <>
-        <div className="columnClass">
+        <div className="columnClass"
+        id = "leftColumn"
+        >
             <h1>{props.head}</h1>
         <ItemComponent
         content = {dadosArray[indexPosition[0][props.columnPosition]][props.columnPosition]}
         position = "1"
         columnposition  = {props.columnPosition}
+        clicked = {0}
+        answer = {indexAnswer[0][0]}
+        
         
         />
         <ItemComponent
         content = {dadosArray[indexPosition[1][props.columnPosition]][props.columnPosition]}
         position = "2"
         columnposition  = {props.columnPosition}
+        clicked = {0}
+        answer = {indexAnswer[1][0]}
+        
         />
         <ItemComponent
         content = {dadosArray[indexPosition[2][props.columnPosition]][props.columnPosition]}
         position = "3"
         columnposition  = {props.columnPosition}
+        clicked = {0}
+        answer = {indexAnswer[2][0]}
+        
         />
         <ItemComponent
         content = {dadosArray[indexPosition[3][props.columnPosition]][props.columnPosition]}
         position = "4"
         columnposition  = {props.columnPosition}
+        clicked = {0}
+        answer = {indexAnswer[3][0]}
+        
         />
         </div>
         </>
