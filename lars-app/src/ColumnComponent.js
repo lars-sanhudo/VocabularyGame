@@ -5,6 +5,7 @@ import dadosArray from "./DadosArray";
 
 let indexAnswer = [[0,0],[0,0],[0,0],[0,0]];
 let indexPosition = RandomPosition(indexAnswer);
+console.log(indexPosition);
 
 
 
@@ -12,6 +13,7 @@ function RandomPosition(indexAnswer) {
     
     let i = 0;
     let indexControl = [[0,0],[0,0],[0,0],[0,0]];
+    
    
     let ok = false;
     
@@ -57,6 +59,7 @@ function RandomPosition(indexAnswer) {
     }
     
     console.log(indexAnswer);
+    
     return (indexControl);
     
 }
@@ -83,7 +86,7 @@ function ColumnComponent(props){
         position = "1"
         columnposition  = {props.columnPosition}
         clicked = {0}
-        answer = {indexAnswer[0][0]}
+        answer = {indexPosition[0][props.columnPosition]}
         
         
         />
@@ -92,7 +95,7 @@ function ColumnComponent(props){
         position = "2"
         columnposition  = {props.columnPosition}
         clicked = {0}
-        answer = {indexAnswer[1][0]}
+        answer = {indexPosition[1][props.columnPosition]}
         
         />
         <ItemComponent
@@ -100,7 +103,7 @@ function ColumnComponent(props){
         position = "3"
         columnposition  = {props.columnPosition}
         clicked = {0}
-        answer = {indexAnswer[2][0]}
+        answer = {indexPosition[2][props.columnPosition]}
         
         />
         <ItemComponent
@@ -108,7 +111,7 @@ function ColumnComponent(props){
         position = "4"
         columnposition  = {props.columnPosition}
         clicked = {0}
-        answer = {indexAnswer[3][0]}
+        answer = {indexPosition[3][props.columnPosition]}
         
         />
         </div>

@@ -6,7 +6,7 @@
 let itemControl = null;
 
 let answerCount = 0;
-let answerControl = 0;
+let answerControl = null;
 
 function ItemComponent(props) {
     
@@ -24,11 +24,11 @@ function ItemComponent(props) {
                     column.appendChild(document.getElementById("item" + itemControl + 0));
                     column.appendChild(document.getElementById("item" + props.position + props.columnposition));
 
-                    console.log(props.answer + "   " +(itemControl-1));
-                    if(props.answer === (itemControl-1)){
+                    
+                    if(props.answer === answerControl){
                         answerCount++;
-                        console.log(answerCount);
                     }
+
 
                     if(column.childElementCount === 9) {
                         if(answerCount === 4){
@@ -45,6 +45,7 @@ function ItemComponent(props) {
 
                 if(props.columnposition === 0) {
                     itemControl = props.position;
+                    answerControl = props.answer;
                  
                 }
                 
