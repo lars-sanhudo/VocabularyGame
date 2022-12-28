@@ -89,6 +89,7 @@ function ColumnComponent(props){
         answer = {indexPosition[0][props.columnPosition]}
         
         
+        
         />
         <ItemComponent
         content = {dadosArray[indexPosition[1][props.columnPosition]][props.columnPosition]}
