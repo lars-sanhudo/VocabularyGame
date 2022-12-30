@@ -8,11 +8,12 @@ let itemControl = null;
 let answerCount = 0;
 let answerControl = null;
 let colorNumber = 0;
+//2f4858-33658a-86bbd8-f6ae2d-f26419
 
 function color(a){
     
     if(a === 0){
-        return "red"; 
+        return "red"
     } else if(a === 1){
         return "blue";
     } 
