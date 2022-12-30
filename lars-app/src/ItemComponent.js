@@ -47,6 +47,8 @@ function ItemComponent(props) {
                     column.appendChild(document.getElementById("item" + props.position + props.columnposition));
                     document.getElementById("item" + itemControl + 0).style.backgroundColor = colorControl(colorNumber);
                     document.getElementById("item" + props.position + props.columnposition).style.backgroundColor = colorControl(colorNumber);
+                    document.getElementById("item" + itemControl + 0).style.padding = "20px";
+                    document.getElementById("item" + props.position + props.columnposition).style.padding = "20px";
                     colorNumber++;
 
                     
@@ -59,7 +61,7 @@ function ItemComponent(props) {
                         if(answerCount === 4){
                             alert("Corrects asnwers.")
                         } else {
-                            alert("Incorrects answers");
+                            alert("Something is not correct. \n Try again.");
                         }
                     }
             
