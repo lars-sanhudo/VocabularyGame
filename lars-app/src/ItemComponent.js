@@ -8,7 +8,10 @@ let itemControl = null;
 let answerCount = 0;
 let answerControl = null;
 let colorNumber = 0;
-//2f4858-33658a-86bbd8-f6ae2d-f26419
+//2f4858-33658a-86bbd8-f6ae2d-f26419 - paleta de cores.
+//Colocar um botão para verificar as respostas, e um display
+//que mostra que está tudo certo - por fim adicionar a opção de
+//dar double click para retornar os itens.
 
 function color(a){
     
